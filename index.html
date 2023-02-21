@@ -12,18 +12,18 @@
     <div class="signup-box">
       <h1>Sign Up</h1>
       <h4>It's free and only takes a minute</h4>
-      <form>
+      <form action="login.html" method="post">
         <label>First Name</label>
-        <input type="text" placeholder="" />
+        <input id="1" type="text" placeholder="" />
         <label>Last Name</label>
-        <input type="text" placeholder="" />
+        <input id="2" type="text" placeholder="" />
         <label>Email</label>
-        <input type="email" placeholder="" />
+        <input id="3" type="email" placeholder="" />
         <label>Password</label>
-        <input type="password" placeholder="" />
+        <input id="4" type="password" placeholder="" />
         <label>Confirm Password</label>
-        <input type="password" placeholder="" />
-        <input type="button" value="Submit" />
+        <input id="5" type="password" placeholder="" />
+        <button type="button" onclick="getdata()" ><a id="redirect" href="login.html">Submit</a></button>
       <closeform></closeform></form>
       <p>
         By clicking the Sign Up button,you agree to our <br />
@@ -33,5 +33,22 @@
     <p class="para-2">
       Already have an account? <a href="login.html">Login here</a>
     </p>
+    <script type="text/javascript">
+      function getdata(){
+        let name=document.getElementById('1').value;
+        let lname=document.getElementById('2').value;
+        let email=document.getElementById('3').value;
+        let pass=document.getElementById('4').value;
+        let cpass=document.getElementById('5').value;
+        let jdata={
+          Name:name,
+          LastName:lname,
+          Email:email,
+          Password:pass
+        }
+        let data=JSON.stringify(jdata);
+        alert(data)
+      }
+    </script>
   </body>
 </html>
