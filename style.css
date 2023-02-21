@@ -47,7 +47,7 @@ form input {
   border-radius: 6px;
   outline: none;
 }
-input[type="button"] {
+button {
   width: 320px;
   height: 35px;
   margin-top: 20px;
@@ -69,5 +69,9 @@ p {
 }
 .para-2 a {
   color: #49c1a2;
+}
+#redirect{
+  color: aliceblue;
+  text-decoration-line: none;
 }
 
